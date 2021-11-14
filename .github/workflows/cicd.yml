@@ -2,7 +2,7 @@ on:
   push:
 name: action
 jobs:
-  hello_world_job:
+  hello-world:
     runs-on: ubuntu-latest
     name: Un job para trabajar
     steps:
