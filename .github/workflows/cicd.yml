@@ -1,0 +1,16 @@
+on:
+  push:
+name: action
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Un job para trabajar
+    steps:
+      - name: Action step para Hola mundo
+        id: hello
+        uses: aristi09/hello-world-docker-action@v1
+        with:
+          who-to-greet: 'David Aristizabal'
+      # Use the output from the `hello` step
+      - name: Obtiene la fecha como salida
+        run: echo "La fecha fue ${{ steps.hello.outputs.time }}"
